@@ -1,5 +1,5 @@
 function palindrome(str) {
-    reversed = str.split("").reverse().join("");
+    reversed = reverse(str);
 
     return str === reversed;
 }
@@ -32,4 +32,16 @@ function palindrome(str) {
 //     return false;
 // }
 
-console.log(palindrome("HAllAH"));
+function reverse(str) {
+    let i = str.length;
+    let res = "";
+    while (i > 0) {
+        res += str[i - 1];
+        i--;
+    }
+
+    return res;
+}
+
+console.log(reverse("bonjour"));
+console.log(palindrome("AllAH"));
